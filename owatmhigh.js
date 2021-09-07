@@ -11,8 +11,17 @@
 // ==/UserScript==
 
 $(document).ready(function(){
+
+    //performing highlights
     $("._lvv_w").not("._lvv_y").css("background","#ffe6e6","important");
     $(".scrollContainer").on('scroll',function() {
        $("._lvv_w").not("._lvv_y").css("background","#ffe6e6","important");
     });
+
+    //removing highlight on click
+    $(".scrollContainer").on('click',function(){
+        $("._lvv_y").css("background","#ffffff","important");
+    });
 });
+
+
