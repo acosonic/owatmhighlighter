@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OutlookPaint
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.3
 // @description  try to take over the world!
 // @author       Aleksandar Pavić https://www.linkedin.com/in/acosonic/detail/recent-activity/posts/
 // @match        https://changethis/owa/
@@ -15,6 +15,12 @@ var bgCol = "#ffffff"; //this is read messages
 
 $(document).ready(function(){
 
+    setTimeout(function(){ window.OutlookPaint(); }, 1000);
+    //console.log("triggered");
+
+});
+
+window.OutlookPaint = function() {
     //performing highlights
     $("._lvv_w").not("._lvv_y").css("background",hlCol,"important");
     $(".scrollContainer").on('scroll',function() {
@@ -30,6 +36,8 @@ $(document).ready(function(){
     $('.scrollContainer').bind('DOMSubtreeModified', function(){
         $("._lvv_w").not("._lvv_y").css("background",hlCol,"important");
     });
-});
+      //  console.log("finished OutlookPaint");
+
+}
 
 
