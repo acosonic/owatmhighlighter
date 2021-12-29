@@ -10,3 +10,6 @@ To use it, you must install TamperMonkey first
 https://www.tampermonkey.net/
 
 Then copy-paste above script, and customize highlight color and OWA URL
+
+Updated view:
+![Preview](https://github.com/acosonic/owatmhighlighter/raw/main/2021-12-28_14-23.png)
